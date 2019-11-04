@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lobster" rel="stylesheet">
+	<link href="./assets/css/styles.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+		.hero-image {
+			background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./assets/images/boots.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.content {
+			margin-top: 20px;
+		}
+
+		.items {
+			max-width: 800px;
+			margin: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 20px;
+		}
+
+		.item-box {
+			padding: 20px;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			background: #FCFCFC;
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+		}
+
+		.item-image {
+			height: 150px;
+			width: 150px;
+			display: block;
+		}
+
+		button {
+			border-radius: 0;
+			font-size: 12px;
+			background: orange;
+			box-shadow: 0 1px rgba(0,0,0,0.1);
+			border: none;
+			color: white;
+			font-family: inherit;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			padding: 10px;
+			margin: 15px;
+		}
+
+		#cart {
+			grid-column: 4;
+			grid-row: 1 / -1;
+			padding: 20px;
+			background: #FCFCFC;
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<ul class="navbar">
+			<li class="navbar-items"><a href="./index.html">Home</a></li>
+			<li class="navbar-items"><a href="./photos.html">Photos</a></li>
+			<li class="navbar-items">
+				<div class="header">
+					<img class="tiny_logo" src="./assets/images/tiny_logo.png">
+					<h1>Adventure Awaits</h1>
+				</div>
+			</li>
+			<li class="navbar-items"><a href="./shop.html">Shop</a></li>
+			<li class="navbar-items"><a href="./about.html">About</a></li>
+		</ul>
+
+		<div class="hero-image">
+			<div class="hero-image-content">
+				<h4>Adventure Awaits</h4>
+				<h3>The Gear You Need</h3>
+				<a href="#content">Buy Stuff!</a>
+			</div>
+		</div>
+
+		<div class="content" id="content">
+			<div class="items">
+				<div class="item-box">
+					<p class="item-name">Hiking Boots</p>
+					<img src="./assets/images/boot-item.jpg" class="item-image">
+					<p class="item-description">These hiking boots will be with you every step of your next adventure.</p>
+					<p class="price">$349.99</p>
+					<button class="addToCart" data-name="Boots" data-price="349.99">Add to Cart</button>
+				</div>
+
+				<div class="item-box">
+					<p class="item-name">Crampons</p>
+					<img src="./assets/images/crampons.jpg" class="item-image">
+					<p class="item-description">When it's icy make things less dicey.</p>
+					<p class="price">$210.00</p>
+					<button class="addToCart" data-name="Crampons" data-price="210.00">Add to Cart</button>
+				</div>
+
+				<div class="item-box">
+					<p class="item-name">Treking Poles</p>
+					<img src="./assets/images/poles.jpg" class="item-image">
+					<p class="item-description">Four limbs are better than two.</p>
+					<p class="price">$49.99</p>
+					<button class="addToCart" data-name="Treking Poles" data-price="49.99">Add to Cart</button>
+				</div>
+
+				<div class="item-box">
+					<p class="item-name">Hiking Backpack</p>
+					<img src="./assets/images/pack.jpg" class="item-image">
+					<p class="item-description">To carry all your gear.</p>
+					<p class="price">$180.00</p>
+					<button class="addToCart" data-name="Hiking Backpack" data-price="180.00">Add to Cart</button>
+				</div>
+
+				<div class="item-box">
+					<p class="item-name">Hardshell Jacket</p>
+					<img src="./assets/images/shell.jpg" class="item-image">
+					<p class="item-description">Hike whether the weather is good or whatever.</p>
+					<p class="price">$230.00</p>
+					<button class="addToCart" data-name="Hardshell Jacket" data-price="230.00">Add to Cart</button>
+				</div>
+
+				<div class="item-box">
+					<p class="item-name">Hiking Partner</p>
+					<img src="./assets/images/dog.jpg" class="item-image">
+					<p class="item-description">Your new best friend.</p>
+					<p class="price">$1000.00</p>
+					<button class="addToCart" data-name="Hiking Partner" data-price="1000.00">Add to Cart</button>
+				</div>
+
+				<div id="cart">
+					<p>Shopping Cart</p>
+					<button id="checkout">Check Out</button>
+					<ul id="cart-list">
+						
+					</ul>
+					<p id="total">Total: $0</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
